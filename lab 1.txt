@@ -1,0 +1,22 @@
+
+
+import pandas  as pd
+import numpy as np
+import matplotlib.pyplot as plt
+df=pd.read_csv('titanic.csv')
+df.head(5)
+table = pd.pivot_table(df,index=['sex,'pclass']aggfunc=['survived=np.sum}) table
+
+table=pd.pivot_table(df,index=['sex','pclass'],values=['survived'],aggfunc=np.mean)table
+
+table=plot(kind='bar');
+
+table = pd.pivot_table(df,index=['sex'],coloumns=['pclass'],values=['survived'],aggfunc=np.sum)table
+table.plot(kind="bar");
+
+#display null values
+table=pd.pivot_table(df,index=['sex','survived','pclass'],coloumns=["embarked"],values=["age'],aggfunc=np.mean)table
+
+#handle null values
+table=pd.pivot_table(df,index=['sex','survived','pclass'],coloumns=["embarked"],values=["age'],aggfunc=np.mean,fill_value=np.mean(df['age']))table
+

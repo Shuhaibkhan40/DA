@@ -1,0 +1,17 @@
+import pandas as pd
+df=pd.read_excel('lab8.xlsx')
+df
+
+df.drop_duplicates(inplace=True)
+df
+
+df.dropna(inplace=True)
+df
+
+df['B'] = df['B'].str.lower()
+df
+
+df.apply(lambda x: x.str.replace(r'[\\n]',' ',regex=True).str.strip())
+
+df=df.apply(lambda x: x.str.replace(r'[^a-zA-Z0-9\s]',' ',regex=True))
+df

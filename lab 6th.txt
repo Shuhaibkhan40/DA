@@ -1,0 +1,51 @@
+import pandas as pd
+df=pd.read_csv("map.csv")
+df
+
+
+df.isnull()sum()
+
+
+df.isnull()
+
+df.dropna(inplace=True)
+df
+
+b)
+gender=['jamei,:male','jane':'female':'melissa''female','ed':'male'jaya:female''rita':female
+
+df['gender']=df['name'].map(gender)
+print(df)
+
+last_names=pd.series['due','miller','edwards','nelson','raul'],index=f['name'])
+df['lastname']=df['name'].map(lastname)
+df
+
+c)
+import pandas as pd
+import numpy as np 
+data={'score':[1,1,1,1,1,1,12,2,2,2,2,2,3,3,15]}
+data=pd.dataframe(data)
+data
+
+from scipy import stats
+datra['z']=stats.zscore(data)
+data.
+
+nooutliers data=data[(data.z>-3)&(data.z<3)]
+no outliers data
+
+
+d)
+import matplotlib.pyplot as plt
+data.plot(kind="line")
+
+data.plot(kind='bar")
+
+data.plot(kind="hist")
+
+data.plot(kind="density")
+
+x=data['score']
+y=data['z']
+data.plot.scatter(x='score',y='z',s=100);

@@ -1,0 +1,24 @@
+import pandas as pd
+import numpy as uf
+df=pd.read_csv("numpy.csv")
+df
+
+df.median()
+
+from scipy import stats
+import numpy as uf
+df['temperature'].plot(kind='box',title='temperature')
+
+df.plot.scatter(x='city',y='temperature')
+
+
+import matplotlib.pyplot as plt
+df.plot(x='city',y='temperature',kind='bar')
+
+df.plot(kind='pie',x='city',labels=df['city'],y='temperature')
+
+df.hist()
+
+plt.show()
+df.hist(column='temperature',color='red')
+

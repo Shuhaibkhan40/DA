@@ -1,0 +1,25 @@
+import pandas as pd
+titanic=pd.read_csv('titanic.csv')
+titanic.head(5)
+
+
+titanic.isnull().sum()
+
+import seaborn as sns
+import matplotlib.pyplot as plt
+sns.catplot(x="Sex",hue="Survived",
+kind="count",data=titanic)
+
+group=titanic.groupby(['Pclass','Survived'])
+Pclass_survived=group.size().unstack()
+sns.heatmap(Pclass_survived,annot=True,fmt="d")
+
+sns.catplot(x='Embarked',hue='Survived',
+kind='count',col='Pclass',data=titanic)
+
+titanic['Fare_Range']=pd.qcut(titanic['Fare'],4)
+sns.barplot(x='Fare_Range',y='Survived',
+data=titanic)
+
+sns.violinplot(x="Sex",y="Age",hue="Survived",
+data=titanic,split=True)

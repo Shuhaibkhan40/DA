@@ -1,0 +1,35 @@
+  city     temperature
+0  mumbai       34
+1  chennai      38
+2  hyderabad    43 
+3  bangalore    30
+4  pune         -4
+5  kochi         33
+6  goa           50
+  
+
+import pandas as pd
+import numpy as np
+df = pd.read_csv('tem.csv")
+df
+
+
+df.shape
+
+df.dtypes
+
+df.head()
+
+df.tail(3)
+
+df.isnull()
+
+df.isnull().sum()
+
+df.count()
+
+df.info()
+
+gk=df.groupby('city')
+gk=gk.get_group('mumbai')
+gk

@@ -1,0 +1,24 @@
+import pandas as pd
+import numpy as np
+from sklearn import linear_model
+import matplotlib.pyplot as plt
+
+df=pd.read_csv('lab11.csv')
+df
+
+x=df.drop('price',axis='coloums')
+x=x.values
+x
+
+price=df.price
+price
+
+
+reg=linear_model_linear regression()
+reg.fit(x,price)
+
+reg.predict([[3000]])
+
+reg.coef_
+
+reg.intercept_

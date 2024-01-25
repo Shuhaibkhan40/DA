@@ -1,0 +1,33 @@
+import pandas as pd
+df1 = pd.read_excel('lab7.xlsx')
+print(df1)
+
+df1.dtypes
+
+df1['percentage'].mean()
+
+df1['percentage'].median()
+
+df1['percentage'].mode()
+
+df1['percentage'].var()
+
+df1['percentage'].std()
+
+
+df1.describe()
+
+df2=pd.read_excel('lab7.xlsx',sheet_name=1)
+print(df2)
+
+df2.dtypes
+
+require_cols=[0,2]
+
+requires_df+pd.read_excel('lab7.xlsx', usecols = required_cols)
+print(required_df)
+
+df=pd.read_excel(lab7.xlsx',sheet_name=1)
+print(df)
+
+df['marks'].fillns(method='ffill')
